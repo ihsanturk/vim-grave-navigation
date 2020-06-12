@@ -1,6 +1,5 @@
-vim-grave-navigation.vim	vim-grave-navigation.vim.txt	/*vim-grave-navigation.vim*
-vim-grave-navigation.vim-about	vim-grave-navigation.vim.txt	/*vim-grave-navigation.vim-about*
-vim-grave-navigation.vim-configuration	vim-grave-navigation.vim.txt	/*vim-grave-navigation.vim-configuration*
-vim-grave-navigation.vim-mappings-buffer	vim-grave-navigation.vim.txt	/*vim-grave-navigation-mappings-buffer*
-vim-grave-navigation.vim-mappings-tab	vim-grave-navigation.vim.txt	/*vim-grave-navigation-mappings-tab*
-vim-grave-navigation.vim.txt	vim-grave-navigation.vim.txt	/*vim-grave-navigation.vim.txt*
+vim-grave-navigation-about	vim-grave-navigation.txt	/*vim-grave-navigation-about*
+vim-grave-navigation-configuration	vim-grave-navigation.txt	/*vim-grave-navigation-configuration*
+vim-grave-navigation-mappings-buffer	vim-grave-navigation.txt	/*vim-grave-navigation-mappings-buffer*
+vim-grave-navigation-mappings-tab	vim-grave-navigation.txt	/*vim-grave-navigation-mappings-tab*
+vim-grave-navigation.txt	vim-grave-navigation.txt	/*vim-grave-navigation.txt*
