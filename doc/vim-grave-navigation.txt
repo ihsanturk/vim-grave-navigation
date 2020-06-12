@@ -1,0 +1,56 @@
+*vim-grave-navigation.txt* Navigate with grave (`)
+
+Author: ihsan <https://ihsanturk.dev/>
+
+CONFIGURATION                                *vim-grave-navigation-configuration*
+g:grave_navigation_for                    'buffer' or 'tab' navigation >
+             let g:grave_navigation_for = 'tab'
+
+             " or
+
+             let g:grave_navigation_for = 'buffer'
+
+BUFFER-MAPPINGS                            *vim-grave-navigation-mappings-buffer*
+>
+
+             nn  `` `
+             tno `` `
+             tma `` `
+             nn  `c :bo 13sp +ter<cr>
+             tno `c :bo 13sp +ter<cr>
+             tma `c <c-\><c-n>:bo 13sp +ter<cr>
+             nn `n :bn<cr>
+             tno `n :bn<cr>
+             tma `n <c-\><c-n>:bn<cr>
+             nn `p :bp<cr>
+             tno `p :bp<cr>
+             tma `p <c-\><c-n>:bp<cr>
+
+TAB-MAPPINGS                                  *vim-grave-navigation-mappings-tab*
+>
+
+             nn `` `
+             nn `1 1gt
+             nn `2 2gt
+             nn `3 3gt
+             nn `4 4gt
+             nn `5 5gt
+             nn `6 6gt
+             nn `7 7gt
+             nn `8 8gt
+             nn `9 9gt
+             nn `c :tabe +ter<cr>
+             nn `n gt
+             nn `p gT
+             tno `1 1gt
+             tno `2 2gt
+             tno `3 3gt
+             tno `4 4gt
+             tno `5 5gt
+             tno `6 6gt
+             tno `7 7gt
+ABOUT                                                *vim-grave-navigation-about*
+
+http://github.com/ihsanturk/vim-grave-navigation
+
+vim:tw=78:et:ft=help:norl:
