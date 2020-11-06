@@ -8,7 +8,7 @@
 
 let g:grave_navigation_for = get(g:, 'grave_navigation_for', 'tab')
 
-if g:grave_navigation_for == 'buffer' " {{{1
+if g:grave_navigation_for == 'buffer'
 	nn  `` `
 	tno `` `
 	tma `` `
@@ -22,8 +22,7 @@ if g:grave_navigation_for == 'buffer' " {{{1
 	tno `p :bp<cr>
 	tma `p <c-\><c-n>:bp<cr>
 
-" }}}
-elseif g:grave_navigation_for == 'tab' " {{{1
+elseif g:grave_navigation_for == 'tab'
 	nn `` `
 	nn `1 1gt
 	nn `2 2gt
@@ -63,9 +62,7 @@ elseif g:grave_navigation_for == 'tab' " {{{1
 	tma `p <c-\><c-n>gT
 end
 
-" }}}
-" Pane/window navigation {{{1
-
+" pane/window navigation
 nn `h <c-w>h
 nn `j <c-w>j
 nn `k <c-w>k
@@ -74,12 +71,9 @@ tma `h <c-\><c-n><c-w>h
 tma `j <c-\><c-n><c-w>j
 tma `k <c-\><c-n><c-w>k
 tma `l <c-\><c-n><c-w>l
-
 nn `b :sp +ter<cr>
 nn `v :vs +ter<cr>
 tma `b <c-\><c-n>:sp +ter<cr>
 tma `v <c-\><c-n>:vs +ter<cr>
-
-" }}}
 
 " : vim: set fdm=marker :
