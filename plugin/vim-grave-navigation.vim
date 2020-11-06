@@ -24,56 +24,33 @@ if g:grave_navigation_for == 'buffer'
 
 elseif g:grave_navigation_for == 'tab'
 	nn `` `
-	nn `1 1gt
-	nn `2 2gt
-	nn `3 3gt
-	nn `4 4gt
-	nn `5 5gt
-	nn `6 6gt
-	nn `7 7gt
-	nn `8 8gt
-	nn `9 9gt
-	nn `c :tabe +ter<cr>
-	nn `n gt
-	nn `p gT
-	tno `1 1gt
-	tno `2 2gt
-	tno `3 3gt
-	tno `4 4gt
-	tno `5 5gt
-	tno `6 6gt
-	tno `7 7gt
-	tno `8 8gt
-	tno `9 9gt
-	tno `c :tabe +ter<cr>
-	tno `n gt
-	tno `p gT
-	tma `1 <c-\><c-n>1gt
-	tma `2 <c-\><c-n>2gt
-	tma `3 <c-\><c-n>3gt
-	tma `4 <c-\><c-n>4gt
-	tma `5 <c-\><c-n>5gt
-	tma `6 <c-\><c-n>6gt
-	tma `7 <c-\><c-n>7gt
-	tma `8 <c-\><c-n>8gt
-	tma `9 <c-\><c-n>9gt
-	tma `c <c-\><c-n>:tabe +ter<cr>
-	tma `n <c-\><c-n>gt
-	tma `p <c-\><c-n>gT
+	for cmd in ['nn', 'tno', 'tma']
+		if cmd == 'tma'
+			let s:prefix = '<c-\><c-n>'
+		else
+			let s:prefix = ''
+		end
+		for i in range(1,9)
+			exe cmd.' `'.i s:prefix.i.'gt'
+		endfo
+		exe cmd.'<silent> `c '.s:prefix.':tabe +ter<cr>'
+		exe cmd.'<silent> `n '.s:prefix.'gt'
+		exe cmd.'<silent> `p '.s:prefix.'gT'
+		exe cmd.'<silent> `z '.s:prefix.':0tabe<cr>'
+		exe cmd.'<silent> `x '.s:prefix.':$tabe<cr>'
+	endfo
 end
 
 " pane/window navigation
-nn `h <c-w>h
-nn `j <c-w>j
-nn `k <c-w>k
-nn `l <c-w>l
-tma `h <c-\><c-n><c-w>h
-tma `j <c-\><c-n><c-w>j
-tma `k <c-\><c-n><c-w>k
-tma `l <c-\><c-n><c-w>l
-nn `b :sp +ter<cr>
-nn `v :vs +ter<cr>
-tma `b <c-\><c-n>:sp +ter<cr>
-tma `v <c-\><c-n>:vs +ter<cr>
-
-" : vim: set fdm=marker :
+for cmd in ['nn', 'tma']
+	if cmd == 'tma'
+		let s:prefix = '<c-\><c-n>'
+	else
+		let s:prefix = ''
+	end
+	for letter in ['h', 'j', 'k', 'l']
+		echo cmd '`'.letter.' '.s:prefix.'<c-w>'.letter
+	endfo
+	echo cmd '`b '.s:prefix.':sp +ter<cr>'
+	echo cmd '`v '.s:prefix.':vs +ter<cr>'
+endfo
