@@ -49,8 +49,8 @@ for cmd in ['nn', 'tma']
 		let s:prefix = ''
 	end
 	for letter in ['h', 'j', 'k', 'l']
-		echo cmd '`'.letter.' '.s:prefix.'<c-w>'.letter
+		exe cmd '`'.letter.' '.s:prefix.'<c-w>'.letter
 	endfo
-	echo cmd '`b '.s:prefix.':sp +ter<cr>'
-	echo cmd '`v '.s:prefix.':vs +ter<cr>'
+	exe cmd '`b '.s:prefix.':sp +ter<cr>'
+	exe cmd '`v '.s:prefix.':vs +ter<cr>'
 endfo
